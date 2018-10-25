@@ -121,6 +121,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/uploads/'
 
 try:
-    from settings_local import *
+    from .settings_local import *
 except ImportError:
     pass
