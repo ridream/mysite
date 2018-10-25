@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname (os.path.dirname (os.path.abspath (__file__)))
 SECRET_KEY = '9@t@4k4t)$&ei$a#d)6lw3-a)q!flns!wntbmss@3&rol28^8+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'ridream.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'rishy97.pythonanywhere.com']
 
 # Application definition
 STATIC_URL = '/personal_site/static/'
@@ -118,3 +118,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/uploads/'
+
+try:
+    from settings_local import *
+except ImportError:
+    pass
